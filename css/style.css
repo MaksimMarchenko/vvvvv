@@ -1,0 +1,294 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+#header {
+    min-height: 40px;
+    width: 900px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+#body{
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+
+}
+
+
+
+
+.section{
+    width: 100%;
+
+}
+
+.section__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header-menu{
+    min-height: 90px;
+    width: 100%;
+    top: 0;
+    /*определяет положение элемента и нижестоящих элементов по оси z*/
+    z-index: 100;
+
+    position:fixed;
+
+}
+
+.container{
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.banner{
+    padding: 90px;
+}
+
+.men-women{
+    display: flex;
+    /*направление вывода флекс-элементов*/
+    flex-flow: column wrap;
+}
+.men{
+    flex-wrap: wrap;
+}
+.logo{
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+.mainmenu__item{
+    padding: 15px;
+}
+.mainmenu__list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;   
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.mainmenu__list{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    left: 422px;
+    padding-top: 50px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+
+
+    letter-spacing: 1px;
+
+    color: #282A30;
+}
+.basket__list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+.slider__item{
+    display: flex;
+    flex-direction: row;
+    padding-top: 200px;
+    padding-left: 0px;
+    min-height: 564px;
+    line-height: 100%;
+    font-size: bold;
+    font-weight: bold;
+    background: url('../img/image1.png') no-repeat right;
+}
+
+.slider__text{
+    position: absolute;
+    width: 171px;
+    height: 0px;
+    left: 0px;
+    top: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+.slider__big-text{
+    font-family: "montserratbold", "Arial", sans-serif;
+    font-size: 55px;
+    text-align: left;
+}
+.slider__big-text_middle{
+    font-size: 55px;
+    font-family: "montserratbold", "Arial", sans-serif;
+}
+.button{
+    display: block;
+    width: 240px;
+    padding: 22px 0;
+    text-align: center;
+    background-color: #d7b399;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+}
+.dress__wrapper{
+    flex-wrap: wrap;
+}
+
+.menu__link{
+    text-decoration: none;
+    padding: 5px 5px;
+    color: black;
+}
+.menu a:hover{
+    text-decoration: underline;
+    color: rgb(188, 197, 61);
+}
+.button{
+    text-decoration: none;
+}
+.banner a:hover{
+    text-decoration: underline;
+    color: rgb(207, 211, 150);
+}
+.block1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.block2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+
+@media (max-width: 1110px){
+    .container{
+        width: auto;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1326px){
+    .slider__button--prev{
+        left: 0;
+    }
+    .slider__button--next{
+        right: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .slider__item{
+        display: none;
+    }
+    
+    .slider__button{
+        display: none;
+    }
+    .header{
+        min-height: 90px;
+    }
+}
+
+@media (max-width: 992px){
+    .menu__wrapper{
+        flex-wrap: wrap;
+    }
+    .logo{
+        order: -1;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    .logo{
+        order: -1;
+        width: 70%;
+    }
+    .basket{
+        order: -1;
+        text-align: right;
+    }
+}
+
+@media(max-width:600px){
+    .basket,
+    .menu
+    {
+        display: none;
+        width: 100%;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .mainmenu__list{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:1110px){
+    .dress__item{
+        width: 25%;
+    }
+}
+
+@media(max-width:768px){
+    .dress__item{
+        width: 33%;
+    }
+}
+
+@media(max-width: 576px){
+    .dress__item{
+        width: 50%;
+    }
+}
+
+@media(max-width: 420px){
+    .dress__item{
+        width: 300%;
+    }
+}
+
+.show{
+    display: block;
+}
+
+@media(max-width:1069px){
+    .delivery__container{
+        font-size: 20px;
+    }
+}
